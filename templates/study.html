@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ study.title }} — {{ site_title }}{% endblock %}
+
+{% block head %}
+{% if study.sketch %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<a class="back" href="/studies/">← Studies</a>
+<article>
+  <h1>{{ study.title }}</h1>
+  <div class="meta">{{ study.date.strftime('%Y·%m·%d') }}</div>
+  {{ study.content }}
+  {% if study.tags %}
+  <div class="tags">
+    {% for tag in study.tags %}<span>#{{ tag }}</span>{% endfor %}
+  </div>
+  {% endif %}
+</article>
+{% endblock %}

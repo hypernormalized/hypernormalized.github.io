@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Studies — {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <a class="back" href="/">← Home</a>
+  <h1>Studies</h1>
+</div>
+<ul class="post-list">
+  {% for study in studies %}
+  <li>
+    <a href="{{ study.url }}">
+      <span class="post-title">{{ study.title }}</span>
+    </a>
+    <span class="post-date">{{ study.date.strftime('%Y·%m·%d') }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

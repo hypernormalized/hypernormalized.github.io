@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Log — {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <a class="back" href="/">← Home</a>
+  <h1>Log</h1>
+</div>
+<ul class="post-list">
+  {% for post in posts %}
+  <li>
+    <a href="{{ post.url }}">
+      <span class="post-title">{{ post.title }}</span>
+    </a>
+    <span class="post-date">{{ post.date.strftime('%Y·%m·%d') }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

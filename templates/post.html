@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} — {{ site_title }}{% endblock %}
+
+{% block head %}
+{% if post.sketch %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<a class="back" href="/log/">← Log</a>
+<article>
+  <h1>{{ post.title }}</h1>
+  <div class="meta">{{ post.date.strftime('%Y·%m·%d') }}</div>
+  {{ post.content }}
+  {% if post.tags %}
+  <div class="tags">
+    {% for tag in post.tags %}<span>#{{ tag }}</span>{% endfor %}
+  </div>
+  {% endif %}
+</article>
+{% endblock %}

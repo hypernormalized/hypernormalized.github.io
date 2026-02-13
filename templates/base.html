@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site_title }}{% endblock %}</title>
+  <meta name="description" content="{{ site_description }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="/feed.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <div class="container">
+    {% block content %}{% endblock %}
+    <footer class="site-footer">
+      <a href="/">{{ site_title }}</a>
+    </footer>
+  </div>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
