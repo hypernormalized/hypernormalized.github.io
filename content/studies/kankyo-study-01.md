@@ -1,5 +1,5 @@
 ---
-title: "Nine Post Cards (Generative Study)"
+title: "Kankyō Study 01"
 date: 2026-02-20
 tags: [music, generative, ambient, kankyo-ongaku, hiroshi-yoshimura]
 ---
