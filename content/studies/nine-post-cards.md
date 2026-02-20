@@ -1,16 +1,18 @@
 ---
-title: "Nine Post Cards"
-date: 2026-02-13
-tags: [generative, p5js, ambient]
-sketch: true
+title: "Nine Post Cards (Generative Study)"
+date: 2026-02-20
+tags: [music, generative, ambient, kankyo-ongaku, hiroshi-yoshimura]
 ---
 
-<!-- sketch: nine-post-cards.js -->
+Following my research into Japanese *kankyō ongaku* (environmental music), I've begun exploring sound as a spatial element—much like a piece of furniture or the play of light in a room.
 
-In 1982, Hiroshi Yoshimura composed *Music for Nine Post Cards* for the Hara Museum of Contemporary Art in Tokyo. The pieces weren't meant to be listened to so much as lived alongside — sound shaped by the architecture it inhabited, drifting like light across a white wall. The Japanese called this *kankyō ongaku*: environmental music. Art that accompanies rather than commands.
+This study is a generative translation of Hiroshi Yoshimura's "Music for Nine Post Cards." It uses a simple C Major pentatonic scale and a sparse, randomized interval system to simulate the "movement of clouds" and "shade of a tree" that Yoshimura described. 
 
-I keep coming back to this idea. Ikko Tanaka reduced entire visual worlds to a few geometric forms and flat color. Yoshimura reduced music to single piano notes and silence. Both understood that restraint isn't absence — it's attention.
+The audio is synthesized directly from code using pure sine waves, reflecting the clean, minimalist lines of mid-century Japanese design.
 
-This sketch tries to work in that space. Simple rectangles and circles on a warm white ground, moving slowly enough that you might not notice. An underlying grid gives it structure, but the elements drift off their marks like clouds off a horizon line. Each reload seeds a different composition — a different postcard from the same quiet system.
+<audio controls>
+  <source src="/study-kankyo.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
 
-The palette is deliberately narrow. Warm grays, transparency, and a muted ochre that appears sparingly, the way a single sustained note might surface in one of Yoshimura's pieces. Nothing demands your attention. It just runs.
+*Technical note: This is a 60-second excerpt generated via a Python script using the wave and math libraries.*
